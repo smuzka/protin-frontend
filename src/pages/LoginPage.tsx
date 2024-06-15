@@ -8,7 +8,6 @@ const LoginPage = () => {
     const [email, setEmail] = useState('');
     const [password, setPassword] = useState('');
     const [error, setError] = useState('');
-    const navigate = useNavigate();
 
     const handleSubmit = async (e: { preventDefault: () => void; }) => {
         e.preventDefault();
@@ -27,7 +26,6 @@ const LoginPage = () => {
             if (response.status === 200) {
                 saveJwtToken(response.data);
                 window.location.reload();
-                // navigate('/profile');
             }
         } catch (error) {
             setError('Invalid email or password');
