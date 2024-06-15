@@ -10,7 +10,11 @@ const root = ReactDOM.createRoot(
 
 root.render(
   <React.StrictMode>
-    <Router/>
+      <div className="w-full h-screen bg-gray-900">
+          <div className="max-w-5xl px-2 py-5 mx-auto h-full format dark:format-invert">
+              <Router/>
+          </div>
+      </div>
   </React.StrictMode>
 );
 
