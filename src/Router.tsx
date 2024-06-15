@@ -7,6 +7,7 @@ import {
     Navigate,
 } from 'react-router-dom';
 
+
 // Components for different pages
 import LoginPage from './pages/LoginPage';
 import RegisterPage from './pages/RegisterPage';
@@ -14,12 +15,10 @@ import ProfilePage from './pages/ProfilePage';
 import RandomUserPage from './pages/RandomUserPage';
 import UserPage from './pages/UserPage';
 import MatchedUsersPage from './pages/MatchedUsersPage';
+import {doesJwtTokenExists} from "./auth/auth";
 
-// Mock authentication function (replace with actual auth logic)
 const isAuthenticated = () => {
-    // Implement your authentication logic here.
-    // For example, check if a token exists in localStorage.
-    return !!localStorage.getItem('authToken');
+    return doesJwtTokenExists();
 };
 
 type ProtectedRouteProps = {
