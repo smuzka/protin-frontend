@@ -1,6 +1,6 @@
 // Import necessary modules
 import React, {ReactNode, useEffect, useState} from 'react';
-import {BrowserRouter as Router, Navigate, Route, Routes, useNavigate,} from 'react-router-dom';
+import {BrowserRouter as Router, Navigate, Route, Routes,} from 'react-router-dom';
 
 
 // Components for different pages
@@ -10,7 +10,7 @@ import ProfilePage from './pages/ProfilePage';
 import RandomUserPage from './pages/RandomUserPage';
 import UserPage from './pages/UserPage';
 import MatchedUsersPage from './pages/MatchedUsersPage';
-import {doesJwtTokenExists, getJwtToken, removeJwtToken, saveJwtToken} from "./auth/auth";
+import {doesJwtTokenExists, getJwtToken, removeJwtToken} from "./auth/auth";
 import axios from "axios";
 import LogButtons from "./components/LogButtons";
 
@@ -74,7 +74,7 @@ const AppRouter = () => {
                             <LogButtons logoutHandler={logoutHandler}/>
                         </div>
                     </div>
-                    <div className="max-w-5xl px-2 py-5 mx-auto h-full">
+                    <div className="max-w-5xl px-2 py-5 mx-auto">
                         <Routes>
                             {/* Guest routes */}
                             <Route

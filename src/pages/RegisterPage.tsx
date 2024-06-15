@@ -1,18 +1,6 @@
 import {useState} from "react";
 import axios from "axios";
-import {saveJwtToken} from "../auth/auth";
 import {useNavigate} from "react-router-dom";
-
-type RegisterForm = {
-    email: string,
-    password: string,
-    username: string,
-    age: number,
-    gender: string,
-    experience: string,
-    education: string,
-    preferences: string,
-}
 
 const RegisterPage = () => {
     const navigate = useNavigate();
