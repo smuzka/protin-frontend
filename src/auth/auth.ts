@@ -11,3 +11,7 @@ export const getJwtToken = (): string | null => {
 export const doesJwtTokenExists = (): boolean => {
     return localStorage.getItem("token") !== null;
 }
+
+export const removeJwtToken = (): void => {
+    localStorage.removeItem("token");
+}

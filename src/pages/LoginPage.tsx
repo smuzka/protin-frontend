@@ -26,7 +26,8 @@ const LoginPage = () => {
 
             if (response.status === 200) {
                 saveJwtToken(response.data);
-                navigate('/profile');
+                window.location.reload();
+                // navigate('/profile');
             }
         } catch (error) {
             setError('Invalid email or password');
