@@ -69,7 +69,7 @@ const AppRouter = () => {
                 <div className="w-full h-full format dark:format-invert contents">
                     <div
                         className="w-full h-24 px-12 py-4 flex justify-between items-center justify-center border-b-2">
-                        <h1 className="m-0">Protin</h1>
+                        <a href="/" className="no-underline"><h1 className="m-0">Protin</h1></a>
                         <div>
                             <NavButtons logoutHandler={logoutHandler}/>
                         </div>
