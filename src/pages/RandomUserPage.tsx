@@ -71,10 +71,6 @@ const RandomUserPage = () => {
     if (loading) return <p>Loading...</p>;
     if (error) return <p>Error: {error}</p>;
 
-    console.log(profileData);
-    console.log(typeof(profileData));
-
-
     return (
         <div className="profile-page">
             <h1>Your potential match:</h1>
