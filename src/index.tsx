@@ -9,9 +9,9 @@ const root = ReactDOM.createRoot(
 );
 
 root.render(
-    <React.StrictMode>
+    <React.Fragment>
         <Router/>
-    </React.StrictMode>
+    </React.Fragment>
 );
 
 reportWebVitals();
