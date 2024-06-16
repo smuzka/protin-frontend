@@ -35,10 +35,10 @@ const MatchedUsersPage = () => {
     return (
         <div className="flex gap-4 flex-col">
             <h1>Your matches</h1>
-            {users ? (
+            {users.length > 0 ? (
                 users.map((user) => {
                     return (
-                        <a href={"/user/" + user.id} className="no-underline block p-6 bg-white border border-gray-200 rounded-lg shadow hover:bg-gray-100 dark:bg-gray-800 dark:border-gray-700 dark:hover:bg-gray-700">
+                        <a key={user.id} href={"/user/" + user.id} className="no-underline block p-6 bg-white border border-gray-200 rounded-lg shadow hover:bg-gray-100 dark:bg-gray-800 dark:border-gray-700 dark:hover:bg-gray-700">
                             <h2><strong>Username:</strong> {user.username}</h2>
                             <p><strong>Email:</strong> {user.email}</p>
                             <p><strong>Age:</strong> {user.age}</p>
