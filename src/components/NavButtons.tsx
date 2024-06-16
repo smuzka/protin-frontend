@@ -14,13 +14,13 @@ const NavButtons = (props: Props) => {
             {doesJwtTokenExists() ?
                 <div className="flex flex-row gap-8">
                     <h4 className="m-0">
-                        <a href="/profile" className="no-underline">Profil</a>
+                        <a href="/profile" className="no-underline">Profile</a>
                     </h4>
                     <h4 className="m-0">
-                        <a href="/random-user" className="no-underline">Szukaj swojej pary</a>
+                        <a href="/random-user" className="no-underline">Find your match</a>
                     </h4>
                     <h4 className="m-0">
-                        <a href="/matched-users" className="no-underline">Twoje pary</a>
+                        <a href="/matched-users" className="no-underline">Your matches</a>
                     </h4>
                     <h4 className="m-0">
                         <LogoutButton logoutHandler={props.logoutHandler}/>

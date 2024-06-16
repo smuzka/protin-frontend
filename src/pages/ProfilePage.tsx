@@ -1,20 +1,11 @@
 import {useEffect, useState} from "react";
 import axios from "axios";
 import {getJwtToken} from "../auth/auth";
-
-type user = {
-    email: string,
-    password: string,
-    username: string,
-    age: number,
-    gender: string,
-    experience: string,
-    education: string,
-    preferences: string,
-}
+import {user} from "../types/user";
 
 const ProfilePage = () => {
     const [profileData, setProfileData] = useState<user>({
+        id: 0,
         email: "",
         password: "",
         username: "",
