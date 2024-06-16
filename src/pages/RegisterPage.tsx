@@ -129,6 +129,7 @@ const RegisterPage = () => {
                                }
                            })}
                     >
+                        <option disabled></option>
                         <option>Male</option>
                         <option>Female</option>
                     </select>
