@@ -12,7 +12,7 @@ import UserPage from './pages/UserPage';
 import MatchedUsersPage from './pages/MatchedUsersPage';
 import {doesJwtTokenExists, getJwtToken, removeJwtToken} from "./auth/auth";
 import axios from "axios";
-import LogButtons from "./components/LogButtons";
+import NavButtons from "./components/NavButtons";
 
 type ProtectedRouteProps = {
     children: ReactNode;
@@ -71,7 +71,7 @@ const AppRouter = () => {
                         className="w-full h-24 px-12 py-4 flex justify-between items-center justify-center border-b-2">
                         <h1 className="m-0">Protin</h1>
                         <div>
-                            <LogButtons logoutHandler={logoutHandler}/>
+                            <NavButtons logoutHandler={logoutHandler}/>
                         </div>
                     </div>
                     <div className="max-w-5xl px-2 py-5 mx-auto">
