@@ -1,12 +1,12 @@
 import {useEffect, useState} from "react";
 import axios from "axios";
 import {getJwtToken} from "../auth/auth";
-import {user} from "../types/user";
+import {User} from "../types/user";
 
 
 const MatchedUsersPage = () => {
 
-    const [users, setUsers] = useState<user[]>([]);
+    const [users, setUsers] = useState<User[]>([]);
     const [loading, setLoading] = useState(true);
     const [error, setError] = useState(null);
 

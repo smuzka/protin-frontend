@@ -1,11 +1,11 @@
 import {useEffect, useState} from "react";
-import {user} from "../types/user";
+import {User} from "../types/user";
 import axios from "axios";
 import {getJwtToken} from "../auth/auth";
 
 
 const RandomUserPage = () => {
-    const [profileData, setProfileData] = useState<user>({
+    const [profileData, setProfileData] = useState<User>({
         id: 0,
         email: "",
         password: "",
@@ -71,10 +71,14 @@ const RandomUserPage = () => {
     if (loading) return <p>Loading...</p>;
     if (error) return <p>Error: {error}</p>;
 
+    console.log(profileData);
+    console.log(typeof(profileData));
+
+
     return (
         <div className="profile-page">
             <h1>Your potential match:</h1>
-            {profileData.id === 0 ? (
+            {typeof(profileData) === "object" ? (
                 <div>
                     <div className="profile-details">
                         <h2><strong>Username:</strong> {profileData.username}</h2>

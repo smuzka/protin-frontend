@@ -1,10 +1,10 @@
 import {useEffect, useState} from "react";
 import axios from "axios";
 import {getJwtToken} from "../auth/auth";
-import {user} from "../types/user";
+import {User} from "../types/user";
 
 const ProfilePage = () => {
-    const [profileData, setProfileData] = useState<user>({
+    const [profileData, setProfileData] = useState<User>({
         id: 0,
         email: "",
         password: "",
